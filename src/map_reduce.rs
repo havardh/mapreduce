@@ -114,7 +114,8 @@ fn find_indexes_for_bins(data: &Vec<PairList>) -> HashMap<char,uint> {
 fn create_bins(index_map: HashMap<char, uint>, data: Vec<PairList>) -> Vec<PairList> {
 
     let mut bins : Vec<PairList> = Vec::from_fn(index_map.len(), |_| vec!());
-        for partial in data.iter() {
+
+    for partial in data.iter() {
         for pair in partial.iter() {
 
             let ch = pair.key.char_at(0);
